@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bubur Ayam Mang Opay</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#07111f;
+    overflow:hidden;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    position:relative;
+    width:350px;
+    height:450px;
+    border-radius:25px;
+    overflow:hidden;
+    /* Perubahan: Gradasi Hitam Premium */
+    background:linear-gradient(145deg, #1e1e1e, #000000);
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.5),
+        inset 0 0 30px rgba(255,255,255,0.03);
+    transition:0.6s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* Lingkaran */
+.circle{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:220px;
+    height:220px;
+    transform:translate(-50%,-50%);
+    background:#09101c;
+    border-radius:50%;
+    transition:0.6s ease;
+    /* Perubahan: Glow Warna Emas/Gold */
+    box-shadow:
+        0 0 30px rgba(255, 215, 0, 0.4),
+        0 0 80px rgba(255, 165, 0, 0.2),
+        0 0 120px rgba(255, 140, 0, 0.1);
+}
+
+.card:hover .circle{
+    width:600px;
+    height:600px;
+}
+
+/* Logo */
+.logo{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:200px;
+    transition:0.6s ease;
+    z-index:2;
+}
+
+.card:hover .logo{
+    transform:translate(-50%,-50%) scale(0);
+}
+
+/* Produk */
+.product-img{
+    position:absolute;
+    width:260px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-15deg);
+    opacity:0;
+    transition:0.7s ease;
+    z-index:3;
+}
+
+.card:hover .product-img{
+    opacity:1;
+    left:72%;
+    transform:translate(-50%,-50%) rotate(0deg);
+}
+
+/* Konten */
+.content{
+    position:absolute;
+    left:20px;
+    bottom:25px;
+    width:45%;
+    opacity:0;
+    transition:0.6s ease;
+    transform:translateY(20px);
+    z-index:5;
+    color:white;
+}
+
+.card:hover .content{
+    opacity:1;
+    transform:translateY(0);
+    transition-delay:0.2s;
+}
+
+.content h2{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.content p{
+    font-size:14px;
+    line-height:1.5;
+    /* Perubahan: Warna teks deskripsi lebih lembut */
+    color:#e0e0e0;
+    margin-bottom:20px;
+}
+
+.content a{
+    display:inline-block;
+    padding:10px 20px;
+    /* Perubahan: Tombol Warna Gold */
+    background:#FFD700;
+    color:#000000;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.content a:hover{
+    background:#ffffff;
+    color:#000000;
+}
+
+/* Judul atas */
+.title{
+    position:absolute;
+    top:30px;
+    width:100%;
+    text-align:center;
+    font-size:42px;
+    font-weight:bold;
+    color:white;
+    letter-spacing:1px;
+}
+
+.title span{
+    /* Perubahan: Aksen Gold pada Nama Brand */
+    color:#FFD700;
+}
+
+@media(max-width:500px){
+
+    .card{
+        width:320px;
+        height:430px;
+    }
+
+    .content{
+        width:55%;
+    }
+
+    .product-img{
+        width:300px;
+    }
+
+    .title{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="title">
+    Bubur Ayam <span>Mang Opay</span>
+</div>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="circle"></div>
+
+        <img 
+        class="logo"
+        src="logo1.png"
+        alt="logo">
+
+        <img 
+        class="product-img"
+        src="bubur.png"
+        alt="Rp.8000,00">
+
+        <div class="content">
+            <h2>Original</h2>
+
+            <p>
+                Bubur beras yang teksturnya halus dan kental dengan bumbu rempah, taburan ayam suwir, kacang goreng, bawang goreng dan siraman kuah kaldu bumbu kuning yang khas
+            </p>
+
+            <a class="wa-btn"
+href="https://api.whatsapp.com/send?phone=6285724113767&text=Halo%20Admin,%20Saya%20ingin%20membeli%20produk%20ini"
+target="_blank">
+
+Pesan
+
+</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
